@@ -53,8 +53,7 @@ function App()
   const [confirmarCard, setConfirmarCard] = useState(false);
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    // setColaboradores([...colaboradores, colaborador]);
-    mensagemAlerta(colaborador); /** alerta mensagem */
+    mensagemAlerta(colaborador); 
   }
   
   const mensagemAlerta = (colaborador) => 
@@ -108,6 +107,5 @@ function App()
 
 export default App;
 
-/* <Banner /> representado pelo diretorio do componente */
 
 

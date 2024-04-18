@@ -10,11 +10,10 @@ import 'react-tippy/dist/tippy.css';
 
 const Formulario = (props) => {
 
-  /** hooks onde é definido o estado do nome, cargo e imagem e set(como alterar) do nome, cargo e imagem */
-  const [nome, setNome] = useState('')  /** ao mudar o estado, o react renderiza novamente */
-  const [cargo, setCargo] = useState('')  /** ao mudar o estado, o react renderiza novamente */
-  const [imagem, setImagem] = useState('')  /** ao mudar o estado, o react renderiza novamente */
-  const [time, setTime] = useState('')  /** ao mudar o estado, o react renderiza novamente */
+  const [nome, setNome] = useState('')  
+  const [cargo, setCargo] = useState('')  
+  const [imagem, setImagem] = useState('')  
+  const [time, setTime] = useState('')  
 
   // Limpar os campos quando confirmarCard é true
   useEffect(() => {
@@ -28,9 +27,8 @@ const Formulario = (props) => {
 
   const aoSalvar = (evento) => {
     evento.preventDefault();
-    // console.log(nome, cargo, imagem, time);
     props.aoColaboradorCadastrado({ 
-      nome, /** indice prop da variavel nome e o valor dela dentro da variavel */
+      nome, 
       cargo, 
       imagem, 
       time 
