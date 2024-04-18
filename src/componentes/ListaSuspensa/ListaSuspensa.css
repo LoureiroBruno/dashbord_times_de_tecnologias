@@ -1,0 +1,57 @@
+.lista-suspensa
+{
+    margin: 24px 0;
+}
+
+.lista-suspensa-fontawesome
+{
+    position: relative;
+}
+
+.lista-suspensa-select {
+    padding-left: 40px !important;
+    font-family: serif;
+}
+
+.lista-suspensa-fontawesome-span
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    color: burlywood;
+}
+
+.lista-suspensa label 
+{
+   display: block;
+   margin-bottom: 8px;
+   font-size: 24px;
+   font-family: serif;
+}
+
+select 
+{
+    outline-color: orange;
+}
+
+select option:checked {
+    background-color: white;
+}
+
+.lista-suspensa select 
+{
+    background-color: #FFF;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    box-sizing: border-box; /* 100% sem barra de rolagem horizontal*/
+
+}
+
+.lista-suspensa-selected-option
+{
+    color: dimgrey
+}
