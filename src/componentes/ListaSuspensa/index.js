@@ -3,6 +3,8 @@ import './ListaSuspensa.css'
 /** criado a função */
 const ListaSuspensa = (props) => 
 {
+    // console.log(props.itens)
+
     return ( /** return JSX */
             <div className='lista-suspensa'>
                 <label>{props.label}</label>

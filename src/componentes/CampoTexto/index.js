@@ -1,13 +1,20 @@
+// import { useState } from 'react'
 import './CampoTexto.css'
+
+
 
 /** criado a função */
 const CampoTexto = (props) => 
 {
+    /** hooks onde é definido o estado do valor e set(como alterar) do valor */
+    //const [valor, setValor] = useState('') /** ao mudar o estado, o react renderiza novamente */
 
     /** criado a função que ao mudar no input*/
     const aoDigitado = (evento) => 
     {
+        // setValor(evento.target.value) /** obtendo o novo valor no value e definindo no setValor */
         props.aoAlterado(evento.target.value)
+        // console.log(props.valor)
     }
 
     return ( /** return JSX */
@@ -27,3 +34,5 @@ const CampoTexto = (props) =>
 
 /** exportado a função */
 export default CampoTexto
+
+//**{`Digite seu ${props.label.toLowerCase()}`} templace sting */

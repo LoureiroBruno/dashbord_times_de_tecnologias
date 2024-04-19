@@ -19,3 +19,6 @@ const Time = (props) =>
 
 /** exportado a função */
 export default Time
+
+
+/** estilizando inline pois não cosegue passar por parametro ao css a estilização do componete */

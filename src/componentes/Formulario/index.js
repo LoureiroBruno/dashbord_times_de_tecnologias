@@ -10,10 +10,11 @@ import 'react-tippy/dist/tippy.css';
 
 const Formulario = (props) => {
 
-  const [nome, setNome] = useState('')  
-  const [cargo, setCargo] = useState('')  
-  const [imagem, setImagem] = useState('')  
-  const [time, setTime] = useState('')  
+  /** hooks onde é definido o estado do nome, cargo e imagem e set(como alterar) do nome, cargo e imagem */
+  const [nome, setNome] = useState('')  /** ao mudar o estado, o react renderiza novamente */
+  const [cargo, setCargo] = useState('')  /** ao mudar o estado, o react renderiza novamente */
+  const [imagem, setImagem] = useState('')  /** ao mudar o estado, o react renderiza novamente */
+  const [time, setTime] = useState('')  /** ao mudar o estado, o react renderiza novamente */
 
   // Limpar os campos quando confirmarCard é true
   useEffect(() => {
@@ -27,8 +28,9 @@ const Formulario = (props) => {
 
   const aoSalvar = (evento) => {
     evento.preventDefault();
+    // console.log(nome, cargo, imagem, time);
     props.aoColaboradorCadastrado({ 
-      nome, 
+      nome, /** indice prop da variavel nome e o valor dela dentro da variavel */
       cargo, 
       imagem, 
       time 
@@ -59,14 +61,16 @@ const Formulario = (props) => {
           aoAlterado={valor => setCargo(valor)}
         />
 
-        <CampoTexto
-          label="Imagem"
-          iconeLabel={<i className="fas fa-image"></i>}
-          placeholder="Informe o seu endereço da imagem"
-          type="text"
-          valor={imagem}
-          aoAlterado={valor => setImagem(valor)}
-        />
+        <Tooltip title="https://github.com/profile.png" position="bottom" trigger="mouseenter">
+          <CampoTexto
+            label="Imagem"
+            iconeLabel={<i className="fas fa-image"></i>}
+            placeholder="Informe o seu endereço da imagem"
+            type="text"
+            valor={imagem}
+            aoAlterado={valor => setImagem(valor)}
+          />
+        </Tooltip>
 
         <ListaSuspensa
           label="Time"

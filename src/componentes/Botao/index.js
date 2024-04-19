@@ -11,3 +11,5 @@ const Botao = (props) =>
 /** exportado a função */
 export default Botao
 
+
+// {props.children} analogo ao html <button>outra coisa dentro <img>...</button>

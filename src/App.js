@@ -53,7 +53,8 @@ function App()
   const [confirmarCard, setConfirmarCard] = useState(false);
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    mensagemAlerta(colaborador); 
+    // setColaboradores([...colaboradores, colaborador]);
+    mensagemAlerta(colaborador); /** alerta mensagem */
   }
   
   const mensagemAlerta = (colaborador) => 
@@ -74,7 +75,7 @@ function App()
       {
         setColaboradores([...colaboradores, colaborador]);
         Swal.fire({
-          position: "top-end",
+          position: "center",
           title: "Sucesso!",
           text: "Adicionado card com sucesso.",
           icon: "success",
@@ -107,5 +108,6 @@ function App()
 
 export default App;
 
+/* <Banner /> representado pelo diretorio do componente */
 
 
