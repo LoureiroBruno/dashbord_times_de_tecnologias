@@ -1,7 +1,9 @@
 .time 
 { 
     text-align: center;
-    padding: 32px;    
+    padding: 32px; 
+    background-blend-mode: multiply;
+    position: relative
 }
 
 .time h3 {
@@ -27,4 +29,10 @@
     margin-bottom: 1em !important;
     padding: 0.5em !important;
     border-radius: 1%;
+}
+
+.input-cor {
+    position: absolute;
+    top: 20px;
+    right: 50px;;
 }
